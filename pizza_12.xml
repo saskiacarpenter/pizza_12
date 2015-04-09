@@ -1,45 +1,32 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="9" x="74" y="52">
-    <next>
-      <block type="oled_setcursor" id="18" inline="true">
-        <value name="STARTX">
-          <block type="math_number" id="64">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-        <value name="STARTY">
-          <block type="math_number" id="71">
-            <field name="NUM">15</field>
+  <block type="controls_whileUntil" id="191" inline="false" x="14" y="51">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="234">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="led_select" id="108" inline="true">
+        <field name="ACTION">FLASH</field>
+        <value name="LED">
+          <block type="math_number" id="115">
+            <field name="NUM">2</field>
           </block>
         </value>
         <next>
-          <block type="oled_drawtext" id="27" disabled="true">
-            <field name="TEXT">12345567789*(1234567*1234567890)=</field>
+          <block type="led_select" id="124" inline="true">
+            <field name="ACTION">FLASH</field>
+            <value name="LED">
+              <block type="math_number" id="131">
+                <field name="NUM">3</field>
+              </block>
+            </value>
             <next>
-              <block type="oled_drawnumber" id="36" inline="true">
-                <value name="NUMBER">
-                  <block type="math_arithmetic" id="43" inline="true">
-                    <field name="OP">MULTIPLY</field>
-                    <value name="A">
-                      <block type="math_number" id="50">
-                        <field name="NUM">1234556799</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_arithmetic" id="78" inline="true">
-                        <field name="OP">MULTIPLY</field>
-                        <value name="A">
-                          <block type="math_number" id="85">
-                            <field name="NUM">123456789</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="92">
-                            <field name="NUM">123456789</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
+              <block type="robot_delay" id="143" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="150">
+                    <field name="NUM">250</field>
                   </block>
                 </value>
               </block>
@@ -47,6 +34,6 @@
           </block>
         </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
