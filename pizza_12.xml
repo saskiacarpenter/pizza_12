@@ -7,26 +7,24 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="led_select" id="108" inline="true">
-        <field name="ACTION">FLASH</field>
-        <value name="LED">
-          <block type="math_number" id="115">
-            <field name="NUM">2</field>
-          </block>
-        </value>
+      <block type="oled_cleardisplay" id="273">
         <next>
-          <block type="led_select" id="124" inline="true">
-            <field name="ACTION">FLASH</field>
-            <value name="LED">
-              <block type="math_number" id="131">
-                <field name="NUM">3</field>
+          <block type="oled_setcursor" id="282" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="289">
+                <field name="NUM">8</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="296">
+                <field name="NUM">8</field>
               </block>
             </value>
             <next>
-              <block type="robot_delay" id="143" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="150">
-                    <field name="NUM">250</field>
+              <block type="oled_drawnumber" id="305" inline="true">
+                <value name="NUMBER">
+                  <block type="sensor_object" id="348">
+                    <field name="OBJECT">LEFTSIDE</field>
                   </block>
                 </value>
               </block>
