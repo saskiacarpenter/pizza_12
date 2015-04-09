@@ -30,7 +30,7 @@
                         <field name="OP">MULTIPLY</field>
                         <value name="A">
                           <block type="math_number" id="85">
-                            <field name="NUM">1234567</field>
+                            <field name="NUM">123456789</field>
                           </block>
                         </value>
                         <value name="B">
